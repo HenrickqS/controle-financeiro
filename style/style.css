@@ -75,3 +75,42 @@ header p {
         font-size: 15px;
     }
 }
+
+/* ---------------- saldos ----------------*/
+
+#saldos-principais {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+#container-saldos {
+    border: 1px solid gray;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: ;
+    padding: 20px;
+    max-width: 900px;
+    width: 100%;
+    gap: 10px;
+}
+
+#saldo-principal {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-bottom: 1px solid gray;
+    gap: 10px;
+}
+
+#saldo-principal p{
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#saldo-principal h3{
+    color: white;
+    font-size: 40px;
+}
