@@ -63,11 +63,12 @@ header p {
         padding: 5px;
         text-align: center;
     }
+
     
     #header-text h1{
+        font-size: 23px;
         width: 100%;
         max-width: 400px;
-        padding: 20px;
     }
 
     #header-text p {
