@@ -110,7 +110,83 @@ header p {
     font-weight: 500;
 }
 
-#saldo-principal h3{
+#saldo-principal h1{
     color: white;
     font-size: 40px;
+}
+
+#entrada {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#saldos {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+#seta-up {
+    border: 1px solid rgb(43, 43, 43);
+    border-radius: 50%;
+    display: flex;
+    width: 38px;
+    height: 38px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(43, 43, 43);
+}
+
+#seta-up p{
+    font-size: 25px;
+    color: white;
+}
+
+#entradas {
+    color:white
+}
+
+#entradas p{
+    font-size: 15px;
+}
+
+#entradas h2 {
+    font-size: 20px;
+}
+
+#saida {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#seta-down {
+    border: 1px solid rgb(43, 43, 43);
+    border-radius: 50%;
+    display: flex;
+    width: 38px;
+    height: 38px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(43, 43, 43);
+}
+
+#seta-down p{
+    font-size: 25px;
+    color: white;
+}
+
+#saidas {
+    color:white
+}
+
+#saidas p{
+    font-size: 15px;
+}
+
+#saidas h2 {
+    font-size: 20px;
 }
