@@ -19,9 +19,11 @@ header {
    justify-content: center;
    align-items: center;
    padding: 30px 20px;
+   max-width: 1200px;
+   margin: 0 auto;
 }
 
-#header-img img{
+header img{
 margin-top: 30px;
  width: 400px;
  height: auto;
@@ -35,4 +37,25 @@ header h1{
 header p {
     font-size: 20px;
     color: rgb(190, 190, 190);
+}
+
+/* ------------------- header mobile ------------------ */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+        text-align: center;
+    }
+    
+    #header-text h1{
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+    }
+
+    #header-text p {
+        font-size: 15px;
+    }
 }
