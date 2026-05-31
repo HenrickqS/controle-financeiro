@@ -66,7 +66,7 @@ header p {
 
     
     #header-text h1{
-        font-size: 23px;
+        font-size: 20px;
         width: 100%;
         max-width: 400px;
     }
@@ -190,6 +190,44 @@ header p {
 #saidas h3 {
     font-size: 20px;
 }
+
+
+/* -------------------- SALDOS MOBILE --------------- */
+
+@media (max-width: 768px) {
+      #seta-up {
+        width: 40px;
+      }
+      
+      #entradas p {
+        font-size: 10px;
+      }
+
+      #entradas h2 {
+        font-size: 15px;
+      }
+
+      #seta-down {
+        width: 40px;
+      }
+      
+      #saidas p {
+        font-size: 10px;
+      }
+
+      #saidas h3 {
+        font-size: 15px;
+      }
+}
+
+
+
+
+
+
+
+
+
 
 /* ----------- CARDS -------------- */
 
