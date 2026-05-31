@@ -195,6 +195,11 @@ header p {
 /* -------------------- SALDOS MOBILE --------------- */
 
 @media (max-width: 768px) {
+
+    #saldo-principal {
+        padding: 5px;
+    }
+
       #seta-up {
         width: 40px;
       }
