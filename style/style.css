@@ -201,7 +201,11 @@ header p {
     }
 
       #seta-up {
-        width: 40px;
+        width: 25px;
+      }
+
+      #entrada {
+        gap: 5px;
       }
       
       #entradas p {
@@ -213,7 +217,7 @@ header p {
       }
 
       #seta-down {
-        width: 40px;
+        width: 25px;
       }
       
       #saidas p {
@@ -222,6 +226,10 @@ header p {
 
       #saidas h3 {
         font-size: 15px;
+      }
+
+      #saida {
+        gap: 5px;
       }
 }
 
