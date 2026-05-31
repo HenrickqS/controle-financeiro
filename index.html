@@ -28,7 +28,7 @@
                 <div id="saldos">
                     <div id="entrada">
                         <div id="seta-up">
-                            <p>↗</p>
+                            <i data-lucide="arrow-up-right"></i>
                         </div>
                         <div id="entradas">
                             <p>Entradas</p>
@@ -37,7 +37,7 @@
                     </div>
                         <div id="saida">
                         <div id="seta-down">
-                            <p>↘</p>
+                            <i data-lucide="arrow-down-right"></i>
                         </div>
                         <div id="saidas">
                             <p>Saidas</p>
@@ -47,7 +47,23 @@
                 </div>
             </div>
         </section>
+        <section id="transicoes">
+            <div id="container-transacoes">
+                <h1>Adicionar Transação</h1>
+                <div id="cards-transicoes">
+                    <input type="text" name="descriçoes" id="input-descricao" placeholder="Descrição">
+                    <input type="text" name="valor" id="input-descricao" placeholder="Digite o Valor">
+                    <button id="btn-entrada" class="btns"><span>+</span> Entrada</button>
+                    <button id="btn-saida" class="btns"><span>-</span> Saída</button>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script>
+  lucide.createIcons();
+</script>
 <script></script>
 </html>

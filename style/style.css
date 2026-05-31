@@ -139,7 +139,7 @@ header p {
     background-color: rgb(43, 43, 43);
 }
 
-#seta-up p{
+#seta-up svg{
     font-size: 25px;
     color: white;
 }
@@ -174,7 +174,7 @@ header p {
     background-color: rgb(43, 43, 43);
 }
 
-#seta-down p{
+#seta-down svg{
     font-size: 25px;
     color: white;
 }
@@ -191,3 +191,79 @@ header p {
     font-size: 20px;
 }
 
+/* ----------- CARDS -------------- */
+
+#container-transacoes {
+
+    border: 1px solid gray;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    max-width: 900px;
+    width: 100%;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+#container-transacoes h1{
+    font-size: 20px;
+    color: white;
+}
+
+#cards-transicoes {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+#cards-transicoes input{
+    padding: 10px;
+    background-color: #0f0f14;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 8px;
+    width: 70%;
+    font-size: 14px;
+    color: white;
+    transition: 0.3s;
+}
+
+#cards-transicoes ::placeholder {
+    color: gray;
+}
+
+#cards-transicoes input:hover {
+    background-color: white;
+    border: 1px solid #0f0f14;
+}
+
+.btns {
+    display: flex;
+    gap: 20px;
+    padding: 12px;
+    background-color: #0f0f14;
+    border: none;
+    color: white;
+    border: 1px solid gray;
+    border-radius: 8px;
+    align-items: center;
+    font-size: 15px;
+    width: 30%;
+    justify-content: center;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.btns span{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.btns:hover{
+   background-color: white;
+   color: #0f0f14;
+   border: 1px solid #0f0f14;
+}
