@@ -254,7 +254,7 @@ header p {
     justify-content: center;
     padding: 20px;
     max-width: 900px;
-    width: 100%;
+    width: 93%;
     gap: 10px;
     margin: 0 auto;
 }
@@ -329,7 +329,7 @@ header p {
 @media (max-width: 768px) {
    
     #container-transacoes {
-        max-width: 710px;
+        max-width: 92%;
    }
 
    #cards-transicoes input{
@@ -355,7 +355,7 @@ header p {
 @media (max-width: 480px) {
    
     #container-transacoes {
-        max-width: 365px;
+        max-width: 86%;
    }
 
    #cards-transicoes {
@@ -387,7 +387,7 @@ header p {
 @media (max-width: 400px) {
    
     #container-transacoes {
-        max-width: 325px;
+        max-width: 85%;
    }
 
    #cards-transicoes {
