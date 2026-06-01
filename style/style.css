@@ -412,3 +412,38 @@ header p {
     font-size: 25px;
    }
 }
+
+/*----------------- HISTORICO ---------------- */
+
+#container-historico {
+    border: 1px solid gray;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    max-width: 900px;
+    width: 93%;
+    gap: 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#container-historico h1{
+    font-size: 20px;
+    color: white;
+}
+
+#container-historico ul {
+    list-style: none;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.cor-entrada {
+    color: green;
+}
+
+.cor-saida {
+    color: red;
+}

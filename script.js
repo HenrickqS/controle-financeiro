@@ -5,6 +5,7 @@ const descricao = document.getElementById('input-descricao');
 const valor = document.getElementById('input-valor');
 const btnEntrada = document.getElementById('btn-entrada');
 const btnSaida = document.getElementById('btn-saida');
+const historico = document.getElementById('lista-transacoes');
 
 let saldoTotal = 0.00;
 let saldoEntrada = 0.00;
@@ -20,6 +21,8 @@ btnEntrada.addEventListener('click', function(){
 
   elementoSaldo.innerText = saldoTotal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
   elementoEntrada.innerText = saldoEntrada.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
+
+  adicionarAoHistorico(descricao.value, valor.value, 'entrada');
 
   descricao.value = '';
   valor.value = '';
@@ -38,10 +41,13 @@ btnSaida.addEventListener('click', function(){
 
   elementoSaldo.innerText = saldoTotal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
   elementoSaida.innerText = saldoSaida.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
-
+  
+  adicionarAoHistorico(descricao.value, valor.value, 'saida');
+  
   descricao.value = '';
   valor.value = '';
   descricao.focus();
+
 
 });
 
@@ -60,5 +66,24 @@ valor.addEventListener('input', function() {
 
   valor.value = valorFormatado;
 
+});
 
-})
+ function adicionarAoHistorico(textoDescricao, textoValor, tipo) {
+    
+    const novoItem = document.createElement('li');
+
+    let seta = tipo === 'entrada' ? '↑ ' : '↓ ';
+
+    novoItem.innerText = `${seta}${descricao.value}, ${valor.value}`;
+    novoItem.classList.add('item-transacao');
+
+    if (tipo === 'entrada') {
+      novoItem.classList.add('cor-entrada');
+    }
+    else {
+      novoItem.classList.add('cor-saida');
+    }
+
+    historico.appendChild(novoItem);
+  
+  }
