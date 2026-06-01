@@ -12,7 +12,8 @@ let saldoSaida = 0.00;
 
 btnEntrada.addEventListener('click', function(){
   
-  const adicionarSaldo = Number(valor.value);
+  const valorLimpo = valor.value.replace(/\D/g, '');
+  const adicionarSaldo = Number(valorLimpo) / 100;
 
   saldoTotal = saldoTotal+adicionarSaldo;
   saldoEntrada = saldoEntrada+adicionarSaldo;
@@ -20,11 +21,17 @@ btnEntrada.addEventListener('click', function(){
   elementoSaldo.innerText = saldoTotal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
   elementoEntrada.innerText = saldoEntrada.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
 
+  descricao.value = '';
+  valor.value = '';
+  descricao.focus();
+
+
 });
 
 btnSaida.addEventListener('click', function(){
   
-  const DiminuirSaldo = Number(valor.value);
+  const valorLimpo = valor.value.replace(/\D/g, '');
+  const DiminuirSaldo = Number(valorLimpo) / 100;
 
   saldoTotal = saldoTotal-DiminuirSaldo;
   saldoSaida = saldoSaida+DiminuirSaldo;
@@ -32,4 +39,26 @@ btnSaida.addEventListener('click', function(){
   elementoSaldo.innerText = saldoTotal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
   elementoSaida.innerText = saldoSaida.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
 
+  descricao.value = '';
+  valor.value = '';
+  descricao.focus();
+
 });
+
+valor.addEventListener('input', function() {
+   
+  let apenasNumeros = valor.value.replace(/\D/g, '');
+
+  if (apenasNumeros === '') {
+    valor.value = '';
+    return;
+  }
+
+  let valorNumero = Number(apenasNumeros) / 100;
+
+  let valorFormatado = valorNumero.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
+
+  valor.value = valorFormatado;
+
+
+})
