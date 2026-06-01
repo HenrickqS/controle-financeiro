@@ -205,7 +205,7 @@ header p {
       }
 
       #entrada {
-        gap: 5px;
+        gap: 2px;
       }
       
       #entradas p {
@@ -229,7 +229,7 @@ header p {
       }
 
       #saida {
-        gap: 5px;
+        gap: 2px;
       }
 }
 
@@ -317,4 +317,34 @@ header p {
    background-color: white;
    color: #0f0f14;
    border: 1px solid #0f0f14;
+}
+
+/* ------------------ TRANSACOES MOBILE ------------------ */
+
+@media (max-width: 768px) {
+   
+    #container-transacoes {
+        max-width: 370px;
+   }
+
+   #cards-transicoes {
+    display: flex;
+    flex-direction: column;
+   }
+
+   #cards-transicoes input{
+    width: 100%;
+   }
+
+   #cards-transicoes button {
+    width: 100%;
+   }
+
+   .btns {
+    font-size: 20px;
+   }
+
+   .btns span{
+    font-size: 25px;
+   }
 }
