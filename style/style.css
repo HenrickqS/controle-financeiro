@@ -432,6 +432,9 @@ header p {
 #container-historico h1{
     font-size: 20px;
     color: white;
+    padding: 5px;
+    margin-top: 10px;
+    border-bottom: 1px solid gray;
 }
 
 #container-historico ul {
@@ -446,4 +449,54 @@ header p {
 
 .cor-saida {
     color: red;
+}
+
+.item-transacao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    padding: 15px;
+}
+.coluna-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.circulo-seta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(43, 43, 43);
+    border-radius: 50%;
+    padding: 5px;
+    color: white;
+}
+
+.descricao-texto {
+    color: white;
+
+}
+
+.tipo-texto {
+    width: 100px;
+    color: white;
+    text-align: left;
+    font-weight: 600;
+}
+
+.coluna-direita {
+    font-weight: 600;
+    flex: 1;
+    text-align: right;
+}
+
+.cor-entrada .circulo-seta {
+    background-color: green;  
+}
+
+.cor-saida .circulo-seta {
+    background-color: red;  
 }

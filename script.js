@@ -72,9 +72,20 @@ valor.addEventListener('input', function() {
     
     const novoItem = document.createElement('li');
 
-    let seta = tipo === 'entrada' ? '↑ ' : '↓ ';
+    let seta = tipo === 'entrada' ? '<i data-lucide="arrow-up-right"></i>' : '<i data-lucide="arrow-down-left"></i>';
+    let tipoFormatado = tipo === 'entrada' ? 'Entrada' : 'Saída';
+    let sinal = tipo === 'entrada' ? '+' : '-';
 
-    novoItem.innerText = `${seta}${descricao.value}, ${valor.value}`;
+    novoItem.innerHTML = 
+      `<div class="coluna-esquerda">
+      <div class = "circulo-seta">${seta}
+      </div>
+      <span class='descricao-texto'>${textoDescricao}</span>
+      </div>
+      <span class='tipo-texto'>${tipoFormatado}</span>
+      <div class='coluna-direita'>
+      <span class=valor-texto>${sinal} ${textoValor}</span>
+      </div>`;
     novoItem.classList.add('item-transacao');
 
     if (tipo === 'entrada') {
@@ -85,5 +96,6 @@ valor.addEventListener('input', function() {
     }
 
     historico.appendChild(novoItem);
+    lucide.createIcons();
   
   }
