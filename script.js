@@ -10,11 +10,17 @@ const historico = document.getElementById('lista-transacoes');
 let saldoTotal = 0.00;
 let saldoEntrada = 0.00;
 let saldoSaida = 0.00;
+let ultimasTransacoes = [];
 
 btnEntrada.addEventListener('click', function(){
   
   const valorLimpo = valor.value.replace(/\D/g, '');
   const adicionarSaldo = Number(valorLimpo) / 100;
+
+  if (descricao.value.trim() === '' || valor.value.trim() === '') {
+    alert('Por favor, preencha a descrição e o valor!');
+    return;
+  }
 
   saldoTotal = saldoTotal+adicionarSaldo;
   saldoEntrada = saldoEntrada+adicionarSaldo;
@@ -35,6 +41,11 @@ btnSaida.addEventListener('click', function(){
   
   const valorLimpo = valor.value.replace(/\D/g, '');
   const DiminuirSaldo = Number(valorLimpo) / 100;
+
+    if (descricao.value.trim() === '' || valor.value.trim() === '') {
+    alert('Por favor, preencha a descrição e o valor!');
+    return;
+  };
 
   saldoTotal = saldoTotal-DiminuirSaldo;
   saldoSaida = saldoSaida+DiminuirSaldo;
@@ -85,6 +96,7 @@ valor.addEventListener('input', function() {
       <span class='tipo-texto'>${tipoFormatado}</span>
       <div class='coluna-direita'>
       <span class=valor-texto>${sinal} ${textoValor}</span>
+      <button class="btn-deletar"><i data-lucide="trash-2"></i></button>
       </div>`;
     novoItem.classList.add('item-transacao');
 
@@ -97,5 +109,11 @@ valor.addEventListener('input', function() {
 
     historico.appendChild(novoItem);
     lucide.createIcons();
+
+    ultimasTransacoes.push({
+    elementoHtml: novoItem,
+    valorNumerico: Number(textoValor.replace(/\D/g, '')) / 100,
+    tipoTransacao: tipo
+});
   
   }

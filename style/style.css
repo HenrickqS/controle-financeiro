@@ -488,9 +488,12 @@ header p {
 }
 
 .coluna-direita {
+    display: flex;
+    justify-content: flex-end;
     font-weight: 600;
     flex: 1;
-    text-align: right;
+    text-align: center;
+    gap: 15px;
 }
 
 .cor-entrada .circulo-seta {
@@ -499,4 +502,26 @@ header p {
 
 .cor-saida .circulo-seta {
     background-color: red;  
+}
+
+.btn-deletar {
+    display: flex;
+    background-color: rgb(184, 184, 184);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-deletar:hover {
+    background-color: gray;
+}
+
+.btn-deletar svg {
+    width: 18px;
+    height: 18px;
+    display: block;
 }
