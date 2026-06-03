@@ -525,3 +525,69 @@ header p {
     height: 18px;
     display: block;
 }
+
+/* ------------------ HISTORICO MOBILE 480PX ------------------ */
+
+@media (max-width: 480px) {
+    #container-historico {
+        max-width: 87%;
+        justify-content: space-around;
+    }
+
+    .circulo-seta {
+        width: 17px;
+    }
+    
+
+    .coluna-esquerda {
+        font-size: 10px;
+        flex: 1;
+    }
+
+    .tipo-texto {
+        font-size: 10px;
+    }
+
+    .coluna-direita {
+        font-size: 9px;
+        flex: 1;
+        font-weight: 600;
+        align-items: center;
+    }
+}
+
+/* ------------------ HISTORICO MOBILE 400PX ------------------ */
+
+@media (max-width: 400px) {
+    #container-historico {
+        max-width: 87%;
+        justify-content: space-around;
+    }
+
+    .item-transacao {
+        gap: 10px;
+    }
+
+    .circulo-seta {
+        width: 20px;
+    }
+
+    .coluna-esquerda {
+        font-size: clamp(0.6rem, 2vw, 1rem)
+        flex: 1;
+        justify-content: flex-start;
+    }
+
+    .tipo-texto {
+        font-size: 10px;
+        justify-content: center;
+    }
+
+    .coluna-direita {
+        font-size: clamp(0.5rem, 1vw, 0.5rem)
+        flex: 1;
+        font-weight: 600;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
