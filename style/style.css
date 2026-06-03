@@ -535,21 +535,21 @@ header p {
     }
 
     .circulo-seta {
-        width: 17px;
+        width: 20px;
     }
     
 
     .coluna-esquerda {
-        font-size: 10px;
+        font-size: clamp(0.6rem, 2vw, 1rem);
         flex: 1;
     }
 
     .tipo-texto {
-        font-size: 10px;
+        font-size: 8px;
     }
 
     .coluna-direita {
-        font-size: 9px;
+        font-size: clamp(0.6rem, 2vw, 1rem);
         flex: 1;
         font-weight: 600;
         align-items: center;
@@ -573,7 +573,7 @@ header p {
     }
 
     .coluna-esquerda {
-        font-size: clamp(0.6rem, 2vw, 1rem)
+        font-size: clamp(0.6rem, 2vw, 1rem);
         flex: 1;
         justify-content: flex-start;
     }
