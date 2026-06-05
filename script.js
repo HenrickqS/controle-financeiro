@@ -114,6 +114,11 @@ valor.addEventListener('input', function() {
     elementoHtml: novoItem,
     valorNumerico: Number(textoValor.replace(/\D/g, '')) / 100,
     tipoTransacao: tipo
-});
+  });
   
+  const btndeletar = document.querySelector('.btn-deletar')
+
+  btndeletar.addEventListener('click', function() {
+    novoItem.remove();
+  })
   }
