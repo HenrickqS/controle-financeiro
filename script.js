@@ -116,9 +116,24 @@ valor.addEventListener('input', function() {
     tipoTransacao: tipo
   });
   
-  const btndeletar = document.querySelector('.btn-deletar')
+  const btndeletar = novoItem.querySelector('.btn-deletar')
 
   btndeletar.addEventListener('click', function() {
     novoItem.remove();
+
+    const valorNumerico = Number(textoValor.replace(/\D/g, '')) / 100;
+
+    if (tipo === 'entrada') {
+      saldoTotal = saldoTotal - valorNumerico;
+      saldoEntrada = saldoEntrada - valorNumerico;
+    }
+    else {
+      saldoTotal = saldoTotal + valorNumerico;
+      saldoSaida = saldoSaida - valorNumerico;
+    }
+
+    elementoSaldo.innerText = saldoTotal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
+    elementoEntrada.innerText = saldoEntrada.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
+    elementoSaida.innerText = saldoSaida.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
   })
   }
