@@ -494,6 +494,8 @@ header p {
     flex: 1;
     text-align: center;
     gap: 15px;
+    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .cor-entrada .circulo-seta {
