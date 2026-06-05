@@ -535,7 +535,7 @@ header p {
     }
 
     .circulo-seta {
-        width: 20px;
+        width: 30px;
     }
     
 
@@ -544,12 +544,22 @@ header p {
         flex: 1;
     }
 
+        .descricao-texto {
+        font-size: 13px;
+        max-width: 120px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+
     .tipo-texto {
         font-size: 8px;
+        display: none;
     }
 
     .coluna-direita {
-        font-size: clamp(0.6rem, 2vw, 1rem);
+        font-size: clamp(0.7rem, 2vw, 1rem);
         flex: 1;
         font-weight: 600;
         align-items: center;
@@ -560,16 +570,26 @@ header p {
 
 @media (max-width: 400px) {
     #container-historico {
-        max-width: 87%;
+        max-width: 85%;
         justify-content: space-around;
     }
 
     .item-transacao {
         gap: 10px;
+        padding: 8px;
+        align-items: center;
+    }
+
+    .descricao-texto {
+        font-size: 13px;
+        max-width: 120px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .circulo-seta {
-        width: 20px;
+        width: 30px;
     }
 
     .coluna-esquerda {
@@ -581,10 +601,11 @@ header p {
     .tipo-texto {
         font-size: 10px;
         justify-content: center;
+        display: none;
     }
 
     .coluna-direita {
-        font-size: clamp(0.5rem, 1vw, 0.5rem)
+        font-size: clamp(0.7rem, 0.5vw, 0.5rem);
         flex: 1;
         font-weight: 600;
         align-items: center;
